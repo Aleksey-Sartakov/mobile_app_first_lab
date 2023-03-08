@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerInParent="false"
+    tools:context=".DictionaryFragment">
+
+    <Button
+        android:id="@+id/button_add2"
+        android:layout_width="309dp"
+        android:layout_height="56dp"
+        android:layout_marginBottom="114dp"
+        android:backgroundTint="@color/buttonsMain"
+        android:fontFamily="@font/rubik_medium"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:text="@string/add_to_dic"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:typeface="normal"
+        app:cornerRadius="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_max="311dp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout_name"
+        android:layout_width="343dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="16dp"
+        android:visibility="visible"
+        app:boxBackgroundMode="outline"
+        app:boxCornerRadiusBottomEnd="12dp"
+        app:boxCornerRadiusBottomStart="12dp"
+        app:boxCornerRadiusTopEnd="12dp"
+        app:boxCornerRadiusTopStart="12dp"
+        app:endIconDrawable="@drawable/searchicon"
+        app:endIconMode="custom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:passwordToggleEnabled="false">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:backgroundTint="@color/white"
+            android:fontFamily="@font/rubik"
+            android:gravity="center_vertical"
+            android:hint="@string/Cooking"
+            android:inputType="textPersonName|text"
+            android:paddingTop="0dp"
+            android:paddingBottom="0dp"
+            android:textSize="14sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/text_noun"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/text_part_of_speech"
+        android:layout_marginLeft="16dp"
+        android:text="@string/noun"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/text_part_of_speech"
+        app:layout_constraintStart_toEndOf="@+id/text_part_of_speech" />
+
+    <TextView
+        android:id="@+id/text_meanings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_part_of_speech"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/rubik_bold"
+        android:lineHeight="26dp"
+        android:text="@string/meanings"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/text_part_of_speech"
+        app:layout_constraintTop_toBottomOf="@+id/text_part_of_speech" />
+
+    <TextView
+        android:id="@+id/text_part_of_speech"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_cooking"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/rubik_bold"
+        android:lineHeight="26dp"
+        android:text="@string/part_of_speech"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/text_cooking"
+        app:layout_constraintTop_toBottomOf="@+id/text_cooking" />
+
+    <ImageView
+        android:id="@+id/volume"
+        android:layout_width="25dp"
+        android:layout_height="22dp"
+        android:layout_alignBottom="@id/text_cooking"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/text_cooking"
+        app:layout_constraintStart_toEndOf="@+id/text_transcription"
+        app:srcCompat="@drawable/audioicon" />
+
+    <TextView
+        android:id="@+id/text_transcription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/text_cooking"
+        android:layout_marginStart="16dp"
+        android:text="@string/cooking_transcript"
+        android:textColor="#E3562A"
+        app:layout_constraintBottom_toBottomOf="@+id/text_cooking"
+        app:layout_constraintStart_toEndOf="@+id/text_cooking" />
+
+    <TextView
+        android:id="@+id/text_cooking"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/rubik_bold"
+        android:lineHeight="32dp"
+        android:text="@string/Cooking"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@+id/textInputLayout_name"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout_name" />
+
+    <TextView
+        android:id="@+id/content2_info"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_cooking"
+        android:layout_alignParentStart="false"
+        android:layout_alignParentEnd="false"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/search_view_bg"
+        android:fontFamily="@font/rubik"
+        android:includeFontPadding="false"
+        android:paddingStart="16dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="10dp"
+        android:text="@string/content1_text"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="@+id/textInputLayout_name"
+        app:layout_constraintStart_toStartOf="@+id/textInputLayout_name"
+        app:layout_constraintTop_toBottomOf="@+id/content1_example" />
+
+    <TextView
+        android:id="@+id/content2_example"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/content1_example"
+        android:layout_alignParentStart="false"
+        android:layout_alignParentEnd="false"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/search_view_bg"
+        android:fontFamily="@font/rubik"
+        android:includeFontPadding="false"
+        android:paddingStart="16dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="10dp"
+        android:text="@string/content1_example"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="@+id/textInputLayout_name"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textInputLayout_name"
+        app:layout_constraintTop_toBottomOf="@+id/content2_info" />
+
+    <TextView
+        android:id="@+id/content1_info"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_cooking"
+        android:layout_alignParentStart="false"
+        android:layout_alignParentEnd="false"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/search_view_bg"
+        android:fontFamily="@font/rubik"
+        android:includeFontPadding="false"
+        android:paddingStart="16dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="10dp"
+        android:text="@string/content1_text"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="@+id/textInputLayout_name"
+        app:layout_constraintStart_toStartOf="@+id/textInputLayout_name"
+        app:layout_constraintTop_toBottomOf="@+id/text_meanings" />
+
+    <TextView
+        android:id="@+id/content1_example"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/content1_info"
+        android:layout_alignParentStart="false"
+        android:layout_alignParentEnd="false"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/search_view_bg"
+        android:fontFamily="@font/rubik"
+        android:includeFontPadding="false"
+        android:paddingStart="16dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="10dp"
+        android:text="@string/content1_example"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="@+id/textInputLayout_name"
+        app:layout_constraintStart_toStartOf="@+id/textInputLayout_name"
+        app:layout_constraintTop_toBottomOf="@+id/content1_info" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
